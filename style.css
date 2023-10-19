@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* FONTS */
+  --fg-primary-font: "Montserrat", sans-serif;
+  /* BRANDING COLORS */
+  --fg-color-1: rgb(0, 0, 0);
+  --fg-color-2: #514b23;
+  --fg-color-3: #656839;
+  --fg-color-4: #cbc9ad;
+  --fg-color-5: #cbd0b9;
+  --fg-color-6: #bddbd0;
+
+  /* BACKGROUND-COLORS */
+  --fg-primary-bg: var(--fg-color-2);
+  --fg-secundary-bg: var(--fg-color-5);
+  --fg-tertiary-bg: var(var(--fg-color-1));
+
+  /* TEXT-COLORS */
+  --fg-primary-text: var(--fg-color-1);
+  --fg-secundary-text: var(var(--fg-color-4));
+  --fg-tertiary-text: white;
+  --fg-spacial-text: var(var(--fg-color-6));
+
+
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--fg-primary-font);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p,
+label,
+button,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--fg-secundary-text);
+}
+
+/* //////HEADER///// */
+
+header {
+  background-color: var(--fg-primary-bg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 300;
+  min-height: 10svh;
+}
+.fg-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.fg-cercle {
+  background-color: var(--fg-color-6);
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+}
+.fg-logo {
+  color: var(--fg-color-6);
+}
+nav {
+
+  width: 60%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul {
+  display: flex;
+  gap: 50px;
+  height: 100%;
+  width: 100%;
+ 
+  align-items: center;
+  justify-content: center;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.fg-menu-icon {
+  display: none;
+}
+a {
+  color: var(--fg-color-6);
+  transition: color 0.8s, border-bottom 1s, scale 1s;
+  
+}
+
+a:hover {
+  color: rgb(253, 184, 46);
+  border-bottom: 2px solid rgb(253, 184, 46);
+  padding-bottom: 8px;
+  /* font-size: 18px; */
+  scale: 1.1;
+}
+
+/* /////HERO/////// */
+
+h1 {
+  font-size: 100px;
+  color: rgb(255, 255, 255, 05);
+  color:var(--fg-color-4)
+
+}
+.fg-hero-text-central p {
+  font-size: 18px;
+  width: 50%;
+  color:var(--fg-color-6);
+
+  background-color: transparent;
+}
+.fg-central-hero {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.226),
+      rgb(17, 12, 1)
+    ),
+    url(./assets/toma-aerea-hermosa-orilla-mar-colinas-fondo-al-atardecer.jpg);
+  height: 130svh; /* Corregido a 100vh */
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 90svh;
+ 
+}
+
+.fg-hero-text-central {
+  display: flex;
+  flex-direction: column;
+  
+  width: 70%;
+  height: 50%;
+
+  justify-content: center;
+  gap: 50px;
+}
+.fg-number {
+  display: flex;
+  flex-direction: column;
+  
+}
+.fg-number p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:var(--fg-color-6);
+ 
+  transition: font-size 1s, color 0.3s, border-botton 1s;
+ 
+  width: 200px;
+  height: 60px;
+}
+.fg-number > p > span {
+  display: flex;
+  flex-direction: row;
+}
+
+.fg-number p:hover {
+  font-size: 40px;
+  color: rgb(253, 184, 46);
+  border-bottom: 2px rgb(253, 184, 46) solid;
+}
+.fg-number-container {
+  display: flex;
+  flex-direction: row;
+}
+.fg-number > p > span:hover {
+  color: aqua;
+  font-size: 16px;
+}
+/* ///////INFERIOR HERO///// */
+.fg-inferior-hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: black;
+}
+.fg-inferior-hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  background-color: var(--fg-color-4);
+  min-height: 200px;
+  width: 350px;
+  text-align: center;
+  gap: 10px;
+  border-radius: 25px;
+  transition: all 1s;
+
+ 
+}
+.fg-inferior-hero-card:hover {
+        box-shadow: 5px 5px 5px azure;
+        border: 2px solid white;
+        transform: scale(1.1);
+        filter: grayscale(0%);
+      }
+
+.fg-icon-map {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+.fg-icon-map > img {
+  height: 100%;
+  width: 100%;
+}
+.button {
+  background-color: beige;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ////////////Tours/// */
+
+.fg-tours-page {
+  /* height: 100svh; */
+  padding-top: 20px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 30px;
+}
+
+.fg-tours-page > h2 {
+  color: #bddbd0;
+  font-size: 40px;
+}
+.fg-tours-page > p {
+  color: #bddbd0;
+  font-size: 20px;
+}
+.fg-tour-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  /* border: 2px solid salmon; */
+  height: 60%;
+  width: 90%;
+  flex-wrap: wrap;
+}
+.fg-tour-card {
+  width: 250px;
+  height: 400px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-image: url("https://res.cloudinary.com/di49fnkc8/image/upload/v1696181944/landing%20TRAVEL/mountain-landscape-2031539_1280_hceljo.jpg");
+  display: cover;
+  transition: all 1s;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+.fg-tour-card:hover {
+  box-shadow: 5px 5px 5px azure;
+  border: 2px solid white;
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+.fg-img-city {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+}
+.fg-img-city > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* //////FOOTER////// */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--fg-primary-bg);
+}
+.fg-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 30%;
+}
+.fg-link {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.fg-link > img {
+  height: 100%;
+
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+ 
+  nav {
+    display: none;
+  }
+  .fg-lupa {
+    display: none;
+  }
+  .fg-menu-icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+  }
+  .fg-menu-icon > img {
+    height: 100%;
+    width: 100%;
+  }
+  .fg-number {
+    display: none;
+  }
+  .fg-central-hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: brown; */
+    height: 400px;
+  }
+
+  .fg-hero-text-central {
+    min-width: 350px;
+    /* background-color: #656839; */
+    text-align: center;
+    min-height: 300px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+  }
+  .fg-hero-text-central > p {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+  }
+  .fg-hero-text-central > h1 {
+    padding-top: 40px;
+    color: #514b23;
+    font-size: 40px;
+  }
+}
